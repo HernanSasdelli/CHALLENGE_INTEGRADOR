@@ -4,27 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home | Funkoshop</title>
-</head>
+    <link rel="stylesheet" href="./css/index.css">
+   </head>
 <body>
     <header>
-        <nav>
-            <picture>   
+        <nav class="navbar">
+            <picture class="navbar__logo">   
                 <a href="">
                     <img src="./image/branding/logo_light_horizontal.svg" alt="Logotipo FunkoShop">
                 </a>
             </picture>
-            <ul>
-                <li>
-                    <a href="./pages/shop.html">SHOP</a>
+            <ul class="navbar__menu">
+                <li class="navbar_item" >
+                    <a class="navbar__link" href="./pages/shop.html">SHOP</a>
                 </li>
-                <li>
-                    <a href="./pages/contact.html">CONTACTO</a>
+                <li class="navbar_item">
+                    <a class="navbar__link" href="./pages/contact.html">CONTACTO</a>
                 </li>
-                <li>
-                    <a href="./pages/login.html">Login</a>
+                <li class="navbar_item">
+                    <a class="navbar__link" href="./pages/login.html">Login</a>
                 </li>                
-                <li>
-                    <a href="./pages/shop.html">
+                <li class="navbar_item">
+                    <a class="navbar__cart" href="./pages/shop.html">
                         <img src="./image/icons/cart-icon.svg" alt="Carrito">
                     </a>
 
@@ -128,6 +129,7 @@
 
 
     <footer>
+
         <section>
             <nav>
                 <ul>
@@ -147,7 +149,6 @@
 
         </section>
         <p>All rights reserved 2023 - Funkoshop &copy;</p>
-
     </footer>
     
 </body>
