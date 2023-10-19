@@ -22,7 +22,7 @@
 
     --base-font:'Inter', sans-serif;
     --alternative-font:'Raleway', sans-serif;
-    --light-font: #FFFFFF;
+    --light-font: #ffffff;
     
     --font-display: 4.6em; /*Buena practica usar em .. 1em = 16px, hack 10px*/
     --font-jumbo:3.8em;
@@ -55,17 +55,18 @@
 html{
     font-family: var(--base-font);
     font-size: 62.5%;
-   /* color: var(--dark-solid);*/
+   
 }
 
 a {
     text-decoration: none;
-    font-size: var(--spacing-20);
-    color: var(--color-primario);
+       
 }   
-header,footer{
+
+header a,footer a{
     font-family:var(--alternative-font);
     color: var(--light-font);
+    
 }
 
 ul, ol {
@@ -76,25 +77,79 @@ p {
     font-size: 18px;
 }
 
-.container{
+img{
+    width: 100%;
+}
+
+/*.container{
     max-width: 1200px;
     margin: 0 auto;
-}
+}*/
+
 
 /*Estilos para el Header*/
 
 header{
     background-color: var(--dark-background-solid);
-
+    padding: var(--spacing-36);
+    color: white;    
 }
 
 .navbar {
         display: flex;/*valor por defecto un elemento uno al lado del otro*/
         justify-content: space-between; /*bloque de un lado y del otro*/
+        align-items: center;
+        max-width: 1200px;
+        margin: 0 auto; 
+}
 
+.navbar__logo{
+    max-width: 300px;
 }
 
 .navbar__menu
 {
     display: flex;
+    align-items: center;
+    gap: var(--spacing-20);
+}
+
+.navbar__link{
+    font-size: var(--font-medium);
+    display: inline-block;
+    padding: var(--spacing-16) var(--spacing-16);
+    transition: background .3s ease-in-out;
+    position: relative;
+}
+.navbar__link:hover{
+    background-color: var(--primary-900);
+    
+}
+.with-icon{
+    max-width: flex;
+    align-items: center;
+    gap: var(--spacing-8);
+}
+
+.with-submenu:hover .submenu{
+    display: block
+}
+
+.submenu{
+    width: 300px;
+    display: none;
+    position: absolute;
+    background-color: var(--dark-background-solid);
+    
+}
+
+
+.submenu__link{
+    display: block;
+    padding: var(--spacing-8)var(--spacing-16);
+    font-size:var(--font-medium) ;
+}
+.submenu__link:hover {
+    background-color: var(--primary-900);
+    transition: background .3s ease-in-out;
 }
